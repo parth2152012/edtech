@@ -1,0 +1,18 @@
+# PDF processing
+PyPDF2>=3.0.0
+PyMuPDF>=1.22.0  # for fitz module
+
+# Document processing
+python-docx2txt>=0.8.0
+
+# Image processing
+Pillow>=9.0.0
+
+# Optional but recommended
+streamlit-extras>=0.3.0  # for enhanced UI components
+# Core dependencies
+streamlit==1.30.0
+google-generativeai==0.3.1
+python-dotenv==1.0.0
+# Standard libraries used (no need to install)
+# re, os, io, datetime
