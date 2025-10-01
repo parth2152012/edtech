@@ -12,7 +12,7 @@ Pillow>=9.0.0
 gTTS>=2.2.3
 SpeechRecognition>=3.8.1
 pydub>=0.25.1
-audio_recorder_streamlit>=0.1.0  # ensure this version or update accordingly
+audio_recorder_streamlit==0.0.10  # fixed: latest available version
 
 # Translation
 googletrans==4.0.0-rc1
@@ -23,5 +23,8 @@ streamlit-extras>=0.3.0  # for enhanced UI components
 google-generativeai==0.3.1
 python-dotenv==1.0.0
 
-# Standard libraries (built-in):
+# Streamlit rich logging compatibility
+rich<14,>=10.14.0  # fixed: rich 14.x not compatible with streamlit 1.30.0
+
+# Standard libraries (built-in — do not install via pip):
 # re, os, io, datetime, time, tempfile, base64, hashlib, logging
