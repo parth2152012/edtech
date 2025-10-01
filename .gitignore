@@ -2,6 +2,7 @@
 *.env
 api_key.md
 secrets.txt
+i.md
 
 # IDE and editor files
 .vscode/
