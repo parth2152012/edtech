@@ -1,0 +1,29 @@
+# API keys and sensitive information
+*.env
+api_key.md
+secrets.txt
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+venv/
+__pycache__/
+
+# Build outputs
+dist/
+build/
+*.exe
+*.dll
+
+# Log files
+*.log
+npm-debug.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
