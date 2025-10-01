@@ -108,7 +108,12 @@ Question: {question_en}
 {"Use simple language suitable for a " + str(age) + "-year-old." if (level == "age_based" and age is not None) else ""}
 """
     response = model.generate_content(prompt)
-    answer = clean_text(response.text)
+    
+    # If there are multiple parts, join them, otherwise use response.text directly.
+    if hasattr(response, "parts") and len(response.parts) > 1:
+        answer = clean_text("".join(part.text for part in response.parts if hasattr(part, "text")))
+    else:
+        answer = clean_text(response.text)
     
     # Translate answer back to target language if needed
     if language != "en":
