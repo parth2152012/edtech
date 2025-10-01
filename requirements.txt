@@ -15,7 +15,8 @@ pydub>=0.25.1
 audio_recorder_streamlit==0.0.10  # fixed: latest available version
 
 # Translation
-googletrans==4.0.0-rc1
+deep-translator>=1.11.4
+
 
 # Core dependencies
 streamlit==1.30.0

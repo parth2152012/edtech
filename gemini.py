@@ -8,7 +8,7 @@ import io
 import fitz  # PyMuPDF for highlighting
 from datetime import datetime
 import PIL.Image
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 import base64  # For audio playback
 import gtts  # Google Text-to-Speech
 import speech_recognition as sr  # For speech-to-text
@@ -84,16 +84,12 @@ def speech_to_text(audio_bytes, language="en-US"):
 
 # --- Language Translation Functions ---
 def translate_text(text, target_language):
-    translator = Translator()
-    translated = translator.translate(text, dest=target_language)
-    return translated.text
+    return GoogleTranslator(source='auto', target=target_language).translate(text)
 
 def translate_to_english(text, source_language):
     if source_language == "en":
         return text
-    translator = Translator()
-    translated = translator.translate(text, src=source_language, dest="en")
-    return translated.text
+    return GoogleTranslator(source=source_language, target="en").translate(text)
 
 # --- Study Buddy Function ---
 def gemini_study_buddy(question, level="standard", age=None, language="en"):
