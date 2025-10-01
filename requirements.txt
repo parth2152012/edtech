@@ -5,21 +5,23 @@ PyMuPDF>=1.22.0  # for fitz module
 # Document processing
 docx2txt>=0.8.0
 
-
 # Image processing
 Pillow>=9.0.0
 
-# Optional but recommended
-streamlit-extras>=0.3.0  # for enhanced UI components
-# Core dependencies
-streamlit==1.30.0
-google-generativeai==0.3.1
-python-dotenv==1.0.0
-googletrans==4.0.0-rc1 
-Pillow>=9.0.0
+# Audio and Speech processing
 gTTS>=2.2.3
 SpeechRecognition>=3.8.1
 pydub>=0.25.1
+audio_recorder_streamlit>=0.1.0  # ensure this version or update accordingly
 
-# Standard libraries used (no need to install)
-# re, os, io, datetime
+# Translation
+googletrans==4.0.0-rc1
+
+# Core dependencies
+streamlit==1.30.0
+streamlit-extras>=0.3.0  # for enhanced UI components
+google-generativeai==0.3.1
+python-dotenv==1.0.0
+
+# Standard libraries (built-in):
+# re, os, io, datetime, time, tempfile, base64, hashlib, logging
