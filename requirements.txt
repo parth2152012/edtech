@@ -3,7 +3,8 @@ PyPDF2>=3.0.0
 PyMuPDF>=1.22.0  # for fitz module
 
 # Document processing
-python-docx2txt>=0.8.0
+docx2txt>=0.8.0
+
 
 # Image processing
 Pillow>=9.0.0
